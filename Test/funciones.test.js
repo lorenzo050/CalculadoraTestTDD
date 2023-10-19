@@ -54,6 +54,9 @@ describe("*** VALIDAR DIVISIONES ***", () => {
       expect(div(20, 2)).toEqual(10);
     });
   
+    test("20 / -2 = -10", () => {
+      expect(div(20, -2)).toEqual(-10);
+    });
     
     //test("20 / 0 = 0", () => {
     //    expect(div(99, 0).toEqual(0));
