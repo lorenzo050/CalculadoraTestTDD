@@ -4,16 +4,6 @@ var should = require("chai").should();
 var testEmpresa = require("../test/empresa.js");
 var clases = require("../empresaClases.js");
 
-//PRUEBA 
-/*
-describe("Main prueba", function () {
-  helloWorldText = "HELLO world";
-  it("HELLO wolrd", function () {
-    assert.equal(helloWorldText, "HELLO world");
-  });
-});
-*/
-
 describe("Comprobando tipos y partes de las clases: ", function () {
   describe("Check addTested Function: ", function () {
 
@@ -41,17 +31,19 @@ describe("Comprobando tipos y partes de las clases: ", function () {
       result.should.equal("Juan");
     });
 
-    /*
-    it("Check the returned value using: value.should.be.a('value'): ", function () {
-      result = calculator.addTested("text");
-      result.should.be.a("string");
+    //POR cada clase hacer UNA PRUEBA
+    it("Check the returned value using:  result.should.equal('Juan2')", function () {
+      TrabajadorNew = new Trabajador("Juan2");
+      result = TrabajadorNew.nombre;
+      result.should.equal("Juan2");
     });
 
-    it("Check the returned value using: expect(value).to.have.lengthOf(value): ", function () {
-      result = calculator.addTested("text");
-      result.should.have.lengthOf(11);
+    it("Ingeniero Check the returned value using:  result.should.equal('Juan Ingeniero');", function () {
+      IngenieroNew = new Trabajador("Juan Ingeniero");
+      result = IngenieroNew.nombre;
+      result.should.equal("Juan Ingeniero");
     });
-    */
+
   });
 });
 
